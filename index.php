@@ -20,10 +20,3 @@ $harry->nim = 'H1101191040';
 $harry->nama = 'Harry Anshary';
 $harry->tanggal_lahir = '31 Maret 2001';
 $harry->jenis_kelamin = 'Laki-laki';
-
-$fadilah->tampilkanAngkatan();
-$fadilah->tampilkanUmur();
-$eraldo->tampilkanAngkatan();
-$eraldo->tampilkanUmur();
-$harry->tampilkanAngkatan();
-$harry->tampilkanUmur();
