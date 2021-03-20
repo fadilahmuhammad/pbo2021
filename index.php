@@ -24,7 +24,7 @@ $user2 = new User('user2','user2');
 
 <html>
     <head>
-        <title>Inheritance</title>
+        <title>Encapsulation</title>
     </head>
     <body>
     

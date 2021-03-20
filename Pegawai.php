@@ -1,10 +1,10 @@
 <?php
 require_once ('User.php');
 class Pegawai extends User{
-    public $nip;
-    public $nama;
-    public $no_hp;
-    public $gaji_pokok;
+    protected $nip;
+    protected $nama;
+    protected $no_hp;
+    protected $gaji_pokok;
 
 
 function __construct($nip, $nama, $hp, $gaji){
@@ -17,5 +17,38 @@ function __construct($nip, $nama, $hp, $gaji){
 public function tampilkanGaji(){
     
 }
+
+public function setNip($nip){
+    $this->nip = $nip;
+}
+
+public function setNama($nama){
+    $this->nama = $nama;
+}
+
+public function setNoHp($no_hp){
+    $this->no_hp = $no_hp;
+}
+
+public function setGajiPokok($gaji_pokok){
+    $this->gaji_pokok = $gaji_pokok;
+}
+
+public function getNip(){
+    $this->nip = $nip;
+}
+
+public function getNama(){
+    $this->nama = $nama;
+}
+
+public function getNoHp(){
+    $this->no_hp = $no_hp;
+}
+
+public function getGajiPokok(){
+    $this->gaji_pokok = $gaji_pokok;
+}
+
 }
 ?>

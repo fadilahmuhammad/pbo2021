@@ -1,8 +1,8 @@
 <?php
 require_once ('Pegawai.php');
 class Dosen extends Pegawai{
-    public $nidn;
-    public $jabatan_akademis;
+    protected $nidn;
+    protected $jabatan_akademis;
 
 
     function __construct($nip, $nama, $hp, $gaji, $nidn, $jabatan){
@@ -21,5 +21,23 @@ public function mengajar(){
 public function meneliti(){
 
 }
+
+public function setNidn($nidn){
+    $this->nidn = $nidn;
+}
+
+public function setJabatanAkademis($jabatan_akademis){
+    $this->jabatan_akademis = $jabatan_akademis;
+}
+
+public function getNidn(){
+    $this->nidn = $nidn;
+}
+
+public function getJabatanAkademis(){
+    $this->jabatan_akademis = $jabatan_akademis;
+}
+
+
 }
 ?>

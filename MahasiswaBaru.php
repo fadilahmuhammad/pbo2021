@@ -2,7 +2,7 @@
 require_once ('Mahasiswa.php');
 class MahasiswaBaru extends Mahasiswa
 {
-    public $no_registrasi;
+    protected $no_registrasi;
 
 
     function __construct($nim, $nama, $tgl, $jk, $regis){
@@ -13,8 +13,16 @@ class MahasiswaBaru extends Mahasiswa
         $this->no_registrasi = $regis;
     }
 
-public function bayarGedung(){
+    public function bayarGedung(){
 
-}
+    }
+
+     public function setNoRegistrasi($no_registrasi){
+    $this->no_registrasi = $no_registrasi;
+    }
+
+    public function getNoRegistrasi(){
+    $this->no_registrasi = $no_registrasi;
+    }
 }
 ?>

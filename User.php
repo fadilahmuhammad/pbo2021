@@ -1,8 +1,8 @@
 <?php
 
 class User{
-    public $username;
-    public $password;
+    protected $username;
+    protected $password;
 
 function __construct($id,$pass){
     $this->username = $id;
@@ -12,5 +12,22 @@ function __construct($id,$pass){
 public function login(){
 
 }
+
+public function setUsername($username){
+    $this->username = $username;
+}
+
+public function setPassword($password){
+    $this->password = $password;
+}
+
+public function getUsername(){
+    $this->username = $username;
+}
+
+public function getPassword(){
+    $this->password = $password;
+}
+
 }
 ?>
