@@ -1,5 +1,5 @@
 <?php
-
+namespace application;
 class User{
     protected $username;
     protected $password;
@@ -10,7 +10,7 @@ function __construct($id,$pass){
 }
 
 public function login(){
-
+    return "$this->username Succesfully login into server.";
 }
 
 public function setUsername($username){

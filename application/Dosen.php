@@ -1,5 +1,5 @@
 <?php
-require_once ('Pegawai.php');
+namespace application;
 class Dosen extends Pegawai{
     protected $nidn;
     protected $jabatan_akademis;
@@ -15,11 +15,11 @@ class Dosen extends Pegawai{
     }
 
 public function mengajar(){
-
+    echo $this->nama. " sedang mengajar<br>";
 }
 
 public function meneliti(){
-
+    echo $this->nama. " sedang meneliti<br>";
 }
 
 public function setNidn($nidn){
@@ -30,14 +30,45 @@ public function setJabatanAkademis($jabatan_akademis){
     $this->jabatan_akademis = $jabatan_akademis;
 }
 
+public function setNip($nip){
+     $this->nip = $nip;
+}
+
+public function setNama($nama){
+    $this->nama = $nama;
+}
+
+public function setHp($hp){
+    $this->no_hp = $hp;
+}
+
+public function setGaji($gaji){
+    $this->gaji_pokok = $gaji;
+}
+
 public function getNidn(){
-    $this->nidn = $nidn;
+    return $this->nidn;
 }
 
 public function getJabatanAkademis(){
-    $this->jabatan_akademis = $jabatan_akademis;
+   return $this->jabatan_akademis;
 }
 
+public function getNip(){
+    return $this->$nip ;
+}
+
+public function getNama(){
+    return $this->$nama;
+}
+
+public function getHp(){
+    return $this->no_hp;
+}
+
+public function getGaji(){
+    return $this->gaji_pokok;
+}
 
 }
 ?>

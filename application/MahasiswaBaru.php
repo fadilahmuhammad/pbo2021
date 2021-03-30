@@ -1,5 +1,5 @@
 <?php
-require_once ('Mahasiswa.php');
+namespace application;
 class MahasiswaBaru extends Mahasiswa
 {
     protected $no_registrasi;
