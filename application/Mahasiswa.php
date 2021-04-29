@@ -1,11 +1,14 @@
 <?php
 
-namespace application;
+namespace App;
 class Mahasiswa extends User {
  protected $nim;
  protected $nama;
  protected $tanggal_lahir;
  protected $jenis_kelamin;
+ const AKTIF = 1;
+ const NONAKTIF = 0;
+ public static $status=self::AKTIF;
  
  function __construct($nim,$nama,$tgl,$jk){
    $this->nim = $nim;
@@ -26,8 +29,34 @@ class Mahasiswa extends User {
  public function tampilkanNama(){
      echo 'Nama : '.$this->nama. '<br>'. '<br>';
  }
+
+ public static function bergerak()
+ {
+   echo "agen solusi, bukan agen perubahan<br/>";
+ }
  
- public function setNim($nim){
+ final public function tuntaskan()
+ {
+   self::bergerak();
+   echo "Memperbaiki menjadi lebih baik";
+ }
+
+//buat fungsi dengan nama hitungSks bertipe static
+/*
+Parameternya adlah $sks, dan $bobot dan di return
+commit "Praktikum 08 - Final Static"
+*/
+
+public static function hitungSks($sks, $bobot)
+{
+ $total = $sks * $bobot;
+ return $total; 
+
+}
+
+
+
+public function setNim($nim){
   $this->nim = $nim;
 }
  public function setNama($nama){

@@ -1,5 +1,5 @@
 <?php
-namespace application;
+namespace App;
 class MahasiswaBaru extends Mahasiswa
 {
     protected $no_registrasi;
